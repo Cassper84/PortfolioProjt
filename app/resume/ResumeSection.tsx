@@ -23,20 +23,20 @@ type ResumeData = {
 const sections: ResumeData = {
   Education: [
     {
-      title: "BSc in Computer Science",
+      title: "BSc in Biochemistry",
       date: "2018 - 2022",
-      institution: "University of Lagos",
+      institution: "Nnamdi Azikwe University, Awka Anambra State Nigeria.",
     },
   ],
   Experience: [
     {
-      title: "Frontend Developer",
-      date: "2022 - Present",
-      company: "Tech Solutions Inc.",
+      title: "Fullstack Developer",
+      date: "2023 - Present",
+      company: "iZone5 Nigeria Ltd",
     },
   ],
   Skills: [
-    "React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB",
+    "React", "Next.js", "TypeScript", "Tailwind CSS", "Mern Stack", "Node.js", "Express.js", "MongoDB", "NoGraphQL", "REST APIs", "Git", "CI/CD", "Problem Solving", "Team Collaboration"
   ],
 };
 
@@ -53,11 +53,10 @@ export default function ResumeSection() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 rounded transition-colors duration-200 ${
-              activeTab === tab
+            className={`px-4 py-2 rounded transition-colors duration-200 ${activeTab === tab
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600"
-            }`}
+              }`}
           >
             {tab}
           </button>
@@ -92,13 +91,27 @@ export default function ResumeSection() {
           ))
         )}
 
-        <a
-          href="/resume.pdf"
-          download
-          className="inline-block mt-6 px-5 py-2 bg-green-600 text-white rounded hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600 transition-colors"
-        >
-          Download Resume
-        </a>
+        <div className="mt-6 flex flex-wrap gap-4">
+          {/* Preview Button */}
+          <a
+            href="/My Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
+          >
+            Preview Resume
+          </a>
+
+          {/* Download Button */}
+          <a
+            href="/My Resume.pdf"
+            download
+            className="px-5 py-2 bg-green-600 text-white rounded hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-600 transition-colors"
+          >
+            Download Resume
+          </a>
+        </div>
+
       </div>
     </div>
   );

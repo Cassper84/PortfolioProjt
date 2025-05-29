@@ -5,7 +5,7 @@ import { FaTwitter, FaGithub, FaFacebook, FaTelegram, FaLinkedin, FaInstagram, F
 
 export default function Footer() {
     return (
-        <footer className="mt-16 py-6 backdrop-blur-md bg-slate-200/20 border-t border-black/10 shadow-inner text-sm text-muted-foreground">
+        <footer className="mt-16 py-6 backdrop-blur-md bg-slate-200/10 border-t border-black/10 shadow-inner text-sm text-muted-foreground">
             <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
                 {/* Left: Copyright */}
                 <p className="mb-4 md:mb-0">

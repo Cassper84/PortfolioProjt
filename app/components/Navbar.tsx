@@ -22,14 +22,16 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-slate-200/20 border-b border-black/10 shadow-md sm:h-[100px]">
+    <nav className="sticky top-0 z-50 backdrop-blur-md bg-slate-200/10 border-b border-black/10 shadow-md sm:h-[100px]">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 py-4 flex justify-between items-center overflow-x-hidden">
         {/* Left Side: Logo */}
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center font-bold text-2xl">
-            <div className="bg-slate-800 text-white w-8 h-8 flex justify-center items-center rounded-sm font-bold">
-              C
-            </div>
+            <img
+              src="/favicon.ico"
+              alt="Cassper logo"
+              className="w-8 h-8 rounded-sm"
+            />
             <span className="ml-2">Cassper</span>
           </Link>
         </div>
@@ -42,7 +44,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className={`transition-colors whitespace-nowrap ${isActive ? "text-cyan-600" : "hover:text-cyan-600"
+                className={`transition-colors whitespace-nowrap ${isActive ? "text-sky-600" : "hover:text-sky-600"
                   }`}
               >
                 {label}
@@ -140,8 +142,8 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={`block py-1 transition-colors ${isActive
-                  ? "text-cyan-600 dark:text-cyan-400"
-                  : "hover:text-cyan-600 dark:hover:text-cyan-400"
+                  ? "text-cyan-600 dark:text-sky-600"
+                  : "hover:text-sky-600 dark:hover:text-sky-600"
                   }`}
                 onClick={() => setIsOpen(false)}
               >

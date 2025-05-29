@@ -23,11 +23,12 @@ import {
   Lightbulb
 } from "lucide-react";
 
-import AchievementTimeline from "../Achievements";
 import TestimonialCarousel from "./Testimonials";
 
 const cardClass = `
-  group shadow-md border rounded-2xl p-4 bg-white dark:bg-muted
+  group shadow-md border rounded-2xl p-4
+  bg-white text-black border-gray-200
+  dark:bg-[#1e293b] dark:text-[#f1f5f9] dark:border-[#334155]
   transition-all duration-300 ease-in-out 
   hover:shadow-xl hover:scale-[1.02] hover:ring-1 hover:ring-blue-300
   h-full flex flex-col

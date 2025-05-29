@@ -4,10 +4,14 @@ import Footer from './components/Footer';
 import ThemeToggleButton from './components/ThemeToggleButton';
 import Providers from './providers';
 import { Metadata } from 'next';
+import LoadingSpinnerOnRouteChange from './components/LoadingSpinnerOnRouteChange';
 
 export const metadata: Metadata = {
-  title: "Cassper's Blog",
-  description: 'Created by Cassper',
+  title: "Ezunu Onochie Peter's Portfolio",
+  description: 'Created by Onochie Peter Ezunu, a Software Engineer from Nigeria.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +29,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />   
           <main className="flex-grow">
+            <LoadingSpinnerOnRouteChange />
             {children}
             <ThemeToggleButton />
           </main>

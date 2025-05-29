@@ -9,7 +9,7 @@ import { FaTwitter, FaGithub, FaFacebook, FaTelegram, FaLinkedin, FaInstagram, F
 export default function ProfileSection() {
   console.log("ProfileSection rendered");
   return (
-    <Card>
+    <Card className="bg-white text-black border border-gray-200 dark:bg-[#1e293b] dark:text-[#f1f5f9] dark:border-[#334155]">
       <div>
         <MyProfilePic />
       </div>
