@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,10 +28,12 @@ export default function Navbar() {
         {/* Left Side: Logo */}
         <div className="flex items-center space-x-3">
           <Link href="/" className="flex items-center font-bold text-2xl">
-            <img
+            <Image
               src="/favicon.ico"
               alt="Cassper logo"
-              className="w-8 h-8 rounded-sm"
+              width={32}
+              height={32}
+              className="rounded-sm"
             />
             <span className="ml-2">Cassper</span>
           </Link>

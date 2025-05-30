@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Dragon Game",
-    description: "A thrilling browser-based action game where players control a mighty dragon to battle enemies, dodge obstacles, and collect power-ups. Built using HTML5 Canvas, JavaScript, and CSS, the game features smooth animations, responsive controls, and dynamic difficulty scaling to keep players challenged and engaged. This project demonstrates my skills in game logic, real-time rendering, and interactive design.",
+    description: "Built using HTML5, JavaScript, and CSS, the game features smooth animations, responsive controls, and dynamic difficulty scaling to keep players challenged and engaged. This project demonstrates my skills in game logic, real-time rendering, and interactive design.",
     image: "/images/project1.png", 
     tech: "HTML, CSS, JavaScript",
     demoUrl: "https://dragon-game-beige.vercel.app/",

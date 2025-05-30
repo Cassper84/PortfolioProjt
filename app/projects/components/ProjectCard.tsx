@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 type Props = {
   title: string;
@@ -33,7 +34,16 @@ const ProjectCard: React.FC<Props> = ({
 
   return (
     <div className="bg-white shadow-lg rounded-2xl overflow-hidden transition-shadow duration-300 hover:shadow-2xl dark:bg-gray-800 dark:shadow-[0_0_15px_#60a5fa]">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="relative w-full h-48">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
+        />
+      </div>
       <div className="p-5 space-y-4">
         <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white">
           {title}
@@ -68,7 +78,7 @@ const ProjectCard: React.FC<Props> = ({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 bg-gray-800 text-white text-center py-2 rounded hover:bg-gray-900 transition"
+            className="flex-1 bg-gray-700 text-white text-center py-2 rounded hover:bg-gray-900 transition"
           >
             GitHub
           </a>

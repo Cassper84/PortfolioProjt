@@ -1,6 +1,8 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { useSwipeable } from "react-swipeable";
 
 const testimonials = [
   {
@@ -26,6 +28,8 @@ const testimonials = [
 export default function TestimonialsCarousel() {
   const [current, setCurrent] = useState(0);
   const [fade, setFade] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const next = () => {
     setFade(false);
@@ -44,12 +48,19 @@ export default function TestimonialsCarousel() {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 5000); // auto-slide every 5 seconds
+    if (!isPaused) {
+      intervalRef.current = setInterval(next, 5000);
+    }
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [current, isPaused]);
 
-    return () => clearInterval(interval); // cleanup on unmount
-  }, [current]);
+  const handlers = useSwipeable({
+    onSwipedLeft: next,
+    onSwipedRight: prev,
+    trackMouse: true,
+  });
 
   return (
     <div className="space-y-6 px-4 sm:px-0 w-full">
@@ -58,6 +69,9 @@ export default function TestimonialsCarousel() {
       </h2>
 
       <div
+        {...handlers}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
         className={`relative w-full p-8 border rounded-2xl shadow-lg 
           bg-white dark:bg-gray-800 
           flex flex-col items-center text-center
@@ -68,13 +82,16 @@ export default function TestimonialsCarousel() {
           transition-opacity duration-300 ease-in-out
         `}
       >
-        <img
-          src={testimonials[current].photo}
-          alt={testimonials[current].name}
-          className="rounded-full w-20 h-20 object-cover border-4 border-indigo-500 dark:border-indigo-400 transition-all duration-300"
-        />
+        <div className="w-20 h-20 relative">
+          <Image
+            src={testimonials[current].photo}
+            alt={testimonials[current].name}
+            fill
+            className="rounded-full object-cover border-4 border-indigo-500 dark:border-indigo-400 transition-all duration-300"
+          />
+        </div>
         <p className="mt-6 text-gray-700 dark:text-gray-300 italic text-lg leading-relaxed max-w-3xl transition-colors duration-500">
-          "{testimonials[current].text}"
+          &quot;{testimonials[current].text}&quot;
         </p>
         <p className="mt-4 font-semibold text-indigo-600 dark:text-indigo-400 text-xl transition-colors duration-500">
           {testimonials[current].name}

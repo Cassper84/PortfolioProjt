@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 
@@ -12,6 +12,7 @@ const GitHubContributions: React.FC<Props> = ({ username }) => {
   return (
     <div className="my-10 text-center">
       <h3 className="text-2xl font-semibold mb-4">GitHub Contributions</h3>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={chartUrl}
         alt={`${username}'s GitHub contribution chart`}

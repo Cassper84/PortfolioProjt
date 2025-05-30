@@ -44,12 +44,12 @@ export default function SkillsSection() {
       <div>
         <h1 className="text-center font-bold text-3xl mb-8">About Me</h1>
         <p className="text-base sm:text-lg leading-relaxed text-muted-foreground mb-6">
-          I'm a <span className="font-semibold text-foreground">full-stack developer</span> skilled in building responsive and scalable web applications using technologies like
+          I&apos;m a <span className="font-semibold text-foreground">full-stack developer</span> skilled in building responsive and scalable web applications using technologies like
           <span className="font-medium"> JavaScript, React, Next.js, Node.js, Express,</span> and <span className="font-medium">MongoDB</span>. I also work confidently with
           <span className="font-medium"> TypeScript, Tailwind CSS,</span> and <span className="font-medium">HTML</span>.
           <br className="hidden sm:block" />
           <br />
-          I'm open to <span className="italic">full-time roles, freelance projects,</span> and <span className="italic">collaborative or open-source opportunities</span>. Below are the core technologies and tools I use to craft high-performance applications.
+          I&apos;m open to <span className="italic">full-time roles, freelance projects,</span> and <span className="italic">collaborative or open-source opportunities</span>. Below are the core technologies and tools I use to craft high-performance applications.
         </p>
       </div>
 

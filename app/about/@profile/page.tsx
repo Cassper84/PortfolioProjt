@@ -28,7 +28,7 @@ export default function ProfileSection() {
           >
             Onochie Peter
           </a>
-          . I'm a dedicated and detail-oriented full-stack developer with a strong passion for building intuitive, scalable, and performant web applications. I specialize in modern technologies like <span className="text-blue-400 font-bold">React</span>, <span className="text-orange-400 font-bold">Next.js</span>, <span className="text-purple-400 font-bold">TypeScript</span>, and <span className="text-green-400 font-bold">Node.js</span> to craft seamless user experiences from front to back.
+          . I&apos;m a dedicated and detail-oriented full-stack developer with a strong passion for building intuitive, scalable, and performant web applications. I specialize in modern technologies like <span className="text-blue-400 font-bold">React</span>, <span className="text-orange-400 font-bold">Next.js</span>, <span className="text-purple-400 font-bold">TypeScript</span>, and <span className="text-green-400 font-bold">Node.js</span> to craft seamless user experiences from front to back.
         </p>
         <p className="mt-2 text-muted-foreground">
           With a keen eye for clean design and a love for solving complex problems, I thrive in collaborative environments where innovation meets functionality.
